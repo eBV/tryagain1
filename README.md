@@ -1,3 +1,19 @@
+## Build notes (archived source-of-truth)
+
+This is the archived source-of-truth for the 2022 Ohnahji mint dapp,
+forked from the HashLips NFT minting dapp (Create React App 4).
+
+- **Node 16 required** (see `.nvmrc`); CRA4 / webpack 4 does not build on
+  Node 17+ without `NODE_OPTIONS=--openssl-legacy-provider`.
+- **npm is the package manager** for this repo (`package-lock.json` is the
+  canonical lockfile; the stale `yarn.lock` was removed in
+  `metito/build-optimize`). Use `npm ci` for clean installs.
+- No lint script: react-scripts 4 has no `lint` command; ESLint runs
+  inside the webpack dev/build compile.
+- `npm run build` → static `build/` output (see `.github/workflows/ci.yml`).
+
+---
+
 # Welcome to HashLips 👄
 
 ![](https://github.com/HashLips/hashlips_nft_minting_dapp/blob/main/logo.png)
